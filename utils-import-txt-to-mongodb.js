@@ -20,14 +20,14 @@ fs.readFile('liste.de.mots.francais.fr.utf8.txt', function(err, data) {
     var array = data.toString().split("\n");
     for(i in array) {
         console.log(array[i]);
-	var word = new Word({
-	    word: array[i],
-	    length: array[i].length,
-	    language: "FR"
-	});
-	word.save(function (err) {
-	    if (err) { throw err; }
-	    console.log('mot ajouté avec succès !');
-	});
+		var word = new Word({
+			word: array[i],
+			length: array[i].length,
+			language: "FR"
+		});
+		word.save(function (err) {
+			if (err) { throw err; }
+				console.log('mot ajouté avec succès !');
+		});
     }
 });
